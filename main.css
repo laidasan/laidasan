@@ -56,6 +56,16 @@ section {
     left: 0%;
     transform: translate(0%,-50%);
 }
+.center {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 100%;
+    background: black;
+}
 .hour {
     position: absolute;
     left: 50%;
@@ -70,8 +80,38 @@ section {
     width: 3px;
     height: 12px;
     background: black;
-    transform: translate(-50%,0%);
+    /* transform: translate(-50%,0%); */
     top:50%;
+}
+.minute {
+    width: 1.5px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    animation: time 4.5s linear infinite;
+}
+.minute:before {
+    position: absolute;
+    width: 1.5px;
+    height: 30px;
+    content: '';
+    top:50%;
+    background: black;
+}
+.second {
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    animation: time 2.25s linear infinite;
+}
+.second:before {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 90px;
+    background: rebeccapurple;
+    top: 50%;
 }
 @keyframes time {
     to {
